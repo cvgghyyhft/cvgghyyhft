@@ -1,0 +1,42 @@
+.box-w{
+	height:155px;
+	background: #6e9a3b;
+}
+.box-w img{
+	display: block;
+}
+.box-w-1{
+	margin-left:220px;
+	padding-top:40px;
+}
+.box-w-1 img{
+	width:100px;
+	height: 40px;
+}
+.w-x{
+	margin-top: 5px;
+}
+.w-x span{
+	font-size:16px;
+	font-family: "幼圆";
+	color:#fff;
+}
+.w-x p{
+	color:#fff;
+	font-size:12px;
+}
+.w-z img{
+	margin-top:-90px;
+	margin-right:120px;
+	float: right;
+}
+.w-z a{
+	color: #fff;
+	margin-top:-70px;
+	margin-right:80px;
+	float: right;
+}
+a{
+	cursor: pointer;
+}
+
