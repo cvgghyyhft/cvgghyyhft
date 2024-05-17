@@ -1,0 +1,42 @@
+ // Hmm. Upgrades
+		      upgrades: {
+		        0: {
+		          type: "stat",
+		          names: "力量增强",
+		          descriptions: "增加你的基础力量。 造成更大的伤害。",
+		          cost: 25,
+		          level: 1,
+		          increment: 1,
+		          costIncreasePerLevel: 20,
+		          metric: "Strength",
+		          stat: "strength",
+		          maxLevel: 100
+		        },
+		        1: {
+		          type: "stat",
+		          names: "智力增强",
+		          descriptions: "提高你的智力并获得更多的每次击杀经验。",
+		          cost: 25,
+		          level: 1,
+		          increment: 1,
+		          costIncreasePerLevel: 20,
+		          metric: "Intelligence",
+		          stat: "intelligence",
+		          maxLevel: 100
+		        },
+		        2: {
+		          type: "stat",
+		          names: "速度增强",
+		          descriptions: "提高你的速度。 出击更快！",
+		          cost: 25,
+		          level: 1,
+		          increment: 1,
+		          costIncreasePerLevel: 20,
+		          metric: "Speed",
+		          stat: "speed",
+		          maxLevel: 7
+		        }
+		      }
+		    };
+		  },
+		
