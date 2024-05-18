@@ -1,0 +1,22 @@
+void MyWebEngineView::contextMenuEvent(QContextMenuEvent *event)
+{
+    QMenu contextMenu(this);
+ 
+    // 添加自定义菜单项
+    QAction *copyAction = contextMenu.addAction(tr("&Copy"));
+    connect(copyAction, &QAction::triggered, this, &MyWebEngineView::copySelection);
+ 
+    // 显示自定义的上下文菜单
+    contextMenu.exec(event->globalPos());
+ 
+    // 阻止默认的上下文菜单显示
+    event->accept();
+}
+ 
+// 定义一个槽函数来处理复制操作
+void MyWebEngineView::copySelection()
+{
+    // 获取并复制当前选中的文本
+    QString selection = this->selectedText();
+    qApp->clipboard()->setText(selection);
+}
