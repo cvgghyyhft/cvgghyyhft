@@ -1,0 +1,10 @@
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { md5 } from 'js-md5'; // 引入
+export default defineComponent({
+  name: 'Test',
+  setup() {
+    console.log('md5加密', md5('hello, my name is FuChaoyang'));
+  }
+});
+</script>
