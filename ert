@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>案例</title>
+<style>
+  .box{
+    /*设置矩形的宽*/
+    width:300px;
+    /*设置矩形的高*/
+    height:300px;
+    /*设置矩形的背景颜色*/
+    background-color:white;
+    /*设置矩形的边框*/
+    /*统一设置矩形的所有边框样式*/
+    border:2px solid black;
+    /*重新设置一个下边框的样式来层叠掉统一设置的边框的样式*/
+    border-bottom:5px solid orange;
+    /*下边框不显示，设置下边框的属性为none*/
+    /*
+    border-bottom:none;*/
+  }
+</style>
+</head>
+
+<body>
+  <!-- 定义一个div标签 -->
+  <div class="box"></div>
+</body>
+
+</html>
