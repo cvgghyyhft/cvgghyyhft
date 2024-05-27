@@ -1,0 +1,15 @@
+  var can = document.querySelector('canvas')
+  var context = can.getContext('2d')   
+  var imgDom = new Image();
+    imgDom.src = './img.jpg';
+    imgDom.onload = function () {
+        // 注意：图像绘制时，必须保证资源已经加载完成
+        console.log('图片的原始宽度', imgDom.naturalWidth);
+        console.log('图片的原始高度', imgDom.naturalHeight);
+ 
+        context.drawImage(
+            imgDom,
+            0, 0,
+            500, imgDom.naturalHeight * 500 / imgDom.naturalWidth
+        );
+    }
