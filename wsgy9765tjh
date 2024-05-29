@@ -1,0 +1,5 @@
+// 获取目标窗口对象
+const targetWindow = window.open('https://example.com', '_blank');
+ 
+// 向目标窗口发送消息
+targetWindow.postMessage({ message: 'Hello, window!', value: 42 }, 'https://example.com');
