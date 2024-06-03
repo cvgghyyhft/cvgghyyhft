@@ -1,0 +1,23 @@
+<?php
+error_reporting(0);
+highlight_file(__FILE__);
+class evil{
+    public $cmd;
+    public $a;
+    public function __destruct(){
+        if('ch3nx1' === preg_replace('/;+/','ch3nx1',preg_replace('/[A-Za-z_\(\)]+/','',$this->cmd))){
+            eval($this->cmd.'isbigvegetablechicken!');
+        } else {
+            echo 'nonono';
+        }
+    }
+}
+
+if(isset($_POST['file']))
+{
+    if(preg_match('/^phar:\/\//i',$_POST['file']))
+    {
+        die("nonono");
+    }
+    file_get_contents($_POST['file']);
+}
