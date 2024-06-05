@@ -1,0 +1,11 @@
+    /**
+     *  保存/修改电子书
+     * @param ebookQueryParam
+     * @return
+     */
+    @PostMapping("/save")
+    public CommonResp save(@Validated @RequestBody EbookSaveParam ebookQueryParam){
+        boolean res = ebookService.saveOrUpdate(CopyUtil.copy(ebookQueryParam,Ebook.class));
+        String message = Boolean.TRUE.equals(res) ? "操作成功":"操作失败";
+        return new CommonResp<>(true,message,null);
+    }
