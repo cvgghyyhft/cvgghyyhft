@@ -1,0 +1,22 @@
+    
+        </div>
+        <div class="navigation_bar1">
+            <p>Movie</p>
+            <p>Channel</p>
+            <div class="category">
+                <a href="https://wujicloud.cn/vodshow/6-----------.html">
+                    <p>动作片</p>
+                </a>
+                <a href="https://wujicloud.cn/vodshow/7-----------.html">
+                    <p>喜剧片</p>
+                </a>
+                <a href="https://wujicloud.cn/vodshow/8-----------.html">
+                    <p>爱情片</p>
+                </a>
+                <a href="https://wujicloud.cn/vodshow/9-----------.html">
+                    <p>科幻片</p>
+                </a>
+                <a href="https://wujicloud.cn/vodshow/10-----------.html">
+                    <p>恐怖片</p>
+                </a>
+            </div>
