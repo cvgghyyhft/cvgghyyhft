@@ -1,0 +1,30 @@
+  
+    for (var i = 0, length = parts.length; i < length; i++) {
+      var part = parts[i];
+      part.sprite.position.x = part.x;
+      part.sprite.position.y = part.y;
+      part.vx = Math.cos(part.angle) * part.speed;
+      part.vy = Math.sin(part.angle) * part.speed;
+      part.x += part.vx;
+      part.y += part.vy;
+      part.speed *= 1.01;
+      if (part.x > w + 50 || part.x < -50 || part.y < -50) {
+        part.x = part.ox;
+        part.y = part.oy;
+        part.speed = 0.01 + Math.random() / 50;
+      }
+    }
+    renderer.render(stage);
+  }
+
+  function loop() {
+    step();
+    requestAnimationFrame(loop);
+  }
+  window.addEventListener('resize', reset);
+  init();
+})(PIXI, this, document);
+</script>
+
+</body>
+</html>
