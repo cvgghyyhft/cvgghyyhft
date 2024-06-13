@@ -1,0 +1,39 @@
+
+        
+        while(curr_dev_sn>0)
+        {
+            u8 encrypt_mode=ENCRYPT_MODE_DISABLE;
+            u8 encrypt_index=0;
+            u8 passwd_buff[20]={0};
+            if(deep_counts==1)//网关设备
+            {
+                encrypt_index=pSeverHead->encrypt_index;//密码索引
+                encrypt_mode=takeDevicePasswd(curr_dev_sn, encrypt_index, passwd_buff);//获取该设备的通讯密码
+            } 
+ 
+            switch(encrypt_mode)
+            {
+                case ENCRYPT_MODE_DISABLE: //不加密
+                {
+                    out_len=in_len;
+                    if(out_len>OUT_BUFF_SIZE)
+                        out_len=0;
+                    memcpy(out_buff, in_buff, in_len);
+                    break;
+                }
+                case ENCRYPT_MODE_TEA: //TEA加密
+                {
+                    out_len=drv_com.TEA_DecryptBuffer(in_buff, in_len, (u32*)passwd_buff);
+                    if(out_len>OUT_BUFF_SIZE)
+                        out_len=0;
+                    memcpy(out_buff, in_buff, out_len);
+                    break;
+                }
+                case ENCRYPT_MODE_AES: //AES加密
+                {
+                    out_len=drv_com.aes_decrypt_buff(in_buff, in_len, out_buff, OUT_BUFF_SIZE, passwd_buff);
+                    break;
+                }
+                default: return;//出错
+            }
+ 
