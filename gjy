@@ -1,0 +1,11 @@
+x = int(input())
+y = int(input())
+g = input()
+if g == "男":
+    h = (x+y)*1.08/2
+    print(int(h))
+elif g == "女":
+    h = (x*0.923+y)/2
+    print(int(h))
+else:
+    print("无对应公式")
